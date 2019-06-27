@@ -20,29 +20,88 @@
 
 
 	html, body {position: relative;}
-	body {background: #eee; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 14px;	color:#000;	margin: 0;padding: 0;	}
-	.swiper-container {width: 100%;	height: 2000px;	}
-	.swiper-slide {	padding:20px;	text-align: center;	font-size: 14px;	background: #fff;	display: -webkit-box;	display: -ms-flexbox;	display: -webkit-flex;	display: flex;	box-sizing: border-box}
+	body {font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 14px;	color:#000;	margin: 0;padding: 0;	}
+	.fullpage {width: 100%;}
+	.cafe {padding:20px;	text-align: center;	font-size: 14px;	background: #fff;	box-sizing: border-box}
+	
+	.cafe-title {padding:20px 0; text-align: center;}
+	.cafe-title p {display:inline-block; font-size:20px; font-weight:bold;}
+		
+	.gallery-thumbs {
+		width:100%;
+		box-sizing: border-box;
+		padding: 10px 0;
+	}
+	.gallery-thumbs .swiper-slide {
+		width:20%;
+		opacity: 0.4;
+	}
+		
+		.gallery-thumbs .swiper-slide img {width:100%;}
+		
+	.gallery-thumbs .swiper-slide-thumb-active {
+		opacity: 1;
+	}
 	</style>
 </head>
 <body>
   <!-- Swiper -->
-  <div class="swiper-container">
+  <div class="fullpage swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <h2 class="title">후보1</h2>
+      <div class="cafe swiper-slide">
+        <div class="cafe-title">
+					<p>div1</p>
+				</div>
+				<div class="swiper-container gallery-top">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="https://file.rankingdak.com/_data/item/1441604555_m.jpg"></div>
+						<div class="swiper-slide"><img src="https://file.rankingdak.com/_data/item/1441605557_m.jpg"></div>
+						<div class="swiper-slide"><img src="https://file.rankingdak.com/_data/item/1515977545_m.jpg"></div>
+						<div class="swiper-slide"><img src="https://file.rankingdak.com/_data/item/086d301a1bc496ec2140101987360be5.jpg"></div>
+						<div class="swiper-slide"><img src="https://file.rankingdak.com/_data/item/1526462219_m.jpg"></div>
+					</div>
+				</div>
+				<div class="swiper-container gallery-thumbs">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="https://file.rankingdak.com/_data/item/1441604555_m.jpg"></div>
+						<div class="swiper-slide"><img src="https://file.rankingdak.com/_data/item/1441605557_m.jpg"></div>
+						<div class="swiper-slide"><img src="https://file.rankingdak.com/_data/item/1515977545_m.jpg"></div>
+						<div class="swiper-slide"><img src="https://file.rankingdak.com/_data/item/086d301a1bc496ec2140101987360be5.jpg"></div>
+						<div class="swiper-slide"><img src="https://file.rankingdak.com/_data/item/1526462219_m.jpg"></div>
+					</div>
+				</div>
       </div>
-      <div class="swiper-slide">
-        <h2 class="title">후보2</h2>
+      <div class="cafe swiper-slide">
+        <div class="cafe-title">
+					<p>div2</p>
+				</div>
+				<div class="gallery-top">
+					<div class="swiper-container"></div>
+				</div>
       </div>
-      <div class="swiper-slide">
-        <h2 class="title">후보3</h2>
+      <div class="cafe swiper-slide">
+        <div class="cafe-title">
+					<p>div3</p>
+				</div>
+				<div class="gallery-top">
+					<div class="swiper-container"></div>
+				</div>
       </div>
-      <div class="swiper-slide">
-        <h2 class="title">후보4</h2>
+      <div class="cafe swiper-slide">
+        <div class="cafe-title">
+					<p>div4</p>
+				</div>
+				<div class="gallery-top">
+					<div class="swiper-container"></div>
+				</div>
       </div>
-      <div class="swiper-slide">
-        <h2 class="title">후보5</h2>
+      <div class="cafe swiper-slide">
+        <div class="cafe-title">
+					<p>div5</p>
+				</div>
+				<div class="gallery-top">
+					<div class="swiper-container"></div>
+				</div>
       </div>
     </div>
     <div class="swiper-scrollbar"></div>
@@ -50,9 +109,29 @@
 <script>
   $(function () {
     //	<!-- Initialize Swiper -->
-    var swiper = new Swiper('.swiper-container', {
+    var swiper = new Swiper('.fullpage', {
 
     });
+
+		var galleryTop = new Swiper('.gallery-top', {
+			nextButton: '.swiper-button-next',
+			prevButton: '.swiper-button-prev',
+			spaceBetween: 10,
+			centeredSlides: true,
+			// autoplay: 3500,
+			autoplayDisableOnInteraction: false,
+			slideToClickedSlide: true
+		});
+		var galleryThumbs = new Swiper('.gallery-thumbs', {
+			spaceBetween: 10,
+			centeredSlides: true,
+			slidesPerView: 'auto',
+			touchRatio: 0.2,
+			slideToClickedSlide: true
+		});
+
+		galleryTop.params.control = galleryThumbs;
+		galleryThumbs.params.control = galleryTop;
 
     swiper.on('slideChange', function () {
       $('html, body').clearQueue().animate({
