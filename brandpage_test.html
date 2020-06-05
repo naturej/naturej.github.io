@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>브랜드페이지 테스트</title>
+	<link rel="stylesheet" href="https://1am-diet.com/_dj/font/font.css">
+</head>
+<body>
+
+<!-- 전체 레이아웃 -->
+<link rel="stylesheet" href="https://1am-diet.com/layout/basic/css/common.css">	
+<link rel="stylesheet" href="https://1am-diet.com/layout/basic/css/ec-base-ui.css">
+<link rel="stylesheet" href="https://1am-diet.com/layout/basic/css/ec-base-tooltip.css">
+<link rel="stylesheet" href="https://1am-diet.com/layout/basic/css/ec-base-help.css">
+<link rel="stylesheet" href="https://1am-diet.com/layout/basic/css/ec-base-product.css">
+<link rel="stylesheet" href="https://1am-diet.com/layout/basic/css/ec-base-paginate.css">
+<link rel="stylesheet" href="https://1am-diet.com/layout/basic/css/ec-base-tab.css">
+<link rel="stylesheet" href="https://1am-diet.com/layout/basic/css/ec-base-button.css">
+<link rel="stylesheet" href="https://1am-diet.com/layout/basic/css/ec-base-box.css">
+<link rel="stylesheet" href="https://1am-diet.com/layout/basic/css/ec-base-table.css">
+<link rel="stylesheet" href="https://1am-diet.com/layout/basic/css/ec-base-desc.css">
+<link rel="stylesheet" href="https://1am-diet.com/_dj/css/dj-layout.css">	
+<link rel="stylesheet" href="https://1am-diet.com/css/module/layout/orderBasketcount.css">	
+<script type="text/javascript" src="https://1am-diet.com//_dj/js/jquery-1.7.2.min.js"></script> 
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+<script src="https://unpkg.com/swiper/js/swiper.js"></script>
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+<div id="header">
+	<div class="inner">
+
+		<div class="logo">
+			<a href="/index.html"><img src="https://1am-diet.com/_dj/img/logo_b.png" class="logo_b" alt="로고"></a>
+		</div>
+		<div class="inner first_in">  
+			<div class="right_area">
+				<div class="right_icon">       
+					<li class="search all_list">               
+						<div id="find_btn" class="find_btn">
+							<a href="#none"><img src="https://1am-diet.com/_dj/img/search_b.png" alt="검색버튼" class="btn_b"></a>
+						</div>
+
+						<div id="find_view">
+							<form id="searchBarForm" name="" action="/product/search.html" method="get" target="_self" enctype="multipart/form-data">
+							<input id="banner_action" name="banner_action" value="/product/search.html?keyword=" type="hidden">
+								<div class="xans-element- xans-layout xans-layout-searchheader ">
+								</div>
+							</form>            
+						</div>
+					</li>
+				</div>
+			</div>
+			<div id="menuOpen" class="menu">
+				<p><img src="https://1am-diet.com/_dj/img/menu_b.png" class="menu_icon"></p>
+			</div>
+		</div>
+
+		<div id="top_category">
+			<div class="inner">
+				<div class="xans-element- xans-layout xans-layout-category left_cate c_position xans-record-">
+					<ul class="category_img">
+						<div class="position">
+							<ul>
+							<li class="list"><a href="/shopinfo/brand.html">브랜드</a></li>
+							<li class="list"><a href="/product/list.html?cate_no=24">구매하기</a></li>
+							<li class="bar"></li>
+							<li class="xans-element- xans-layout xans-layout-orderbasketcount cart "><a href="/order/basket.html"><strong>장바구니</strong> <span>2</span>개</a></li>
+							</ul>
+						</div>   
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="wrap">
+    <div id="container">
+    
+         
+         
+         
+         
+         
+         
+
+
+
+<style>
+    body {min-width:inherit;}
+	#container{max-width:inherit !important; padding:0; background:#f8f8f8;}
+    #header.header_scroll_fixed {display:none;}
+    
+    section {height: 100vh;	position: relative;	z-index: 88;}
+    
+    h2 {font-size:69px; font-weight:500;}
+    
+    #start {background:url(https://1am-diet.com/_dj/img/brand/brand_bg1.jpg); background-size:cover; }
+    #intro {position: absolute;	display: block;	width: 100%; height: 400px;	top: 45%; text-align:center;}
+    #intro .text_wrap {display:inline-block; overflow:hidden; height:120px; vertical-align:middle;}
+    #intro .text_change_wrap {display:inline-block; overflow:hidden; height:120px; vertical-align:middle;}
+    #intro .text_change {overflow:hidden; width:300px; height:120px;}
+    #intro .text_change .scroll_before {transition:0.2s;}
+    #intro h1 {text-align: center; width: 100%; height:0; top: 135px; margin: 0; color:#fff; font-size:100px; opacity:0;}
+
+    #intro svg text {font-family: 'Noto Sans KR'; font-weight:700; paint-order: stroke; stroke: #fff; stroke-width: 2px; stroke-linecap: butt; stroke-linejoin: miter; fill: rgba(255, 255, 255, 0);}
+    #intro svg text tspan {font-size:90px;}
+    #intro .text_change .scroll_after svg text {stroke-width:0; fill:#fff;}
+    
+ 	#info {height:260vh;}   
+    #info #spacer2 {height:50vh;}
+    #info #trigger2_change {margin-top:50vh;}
+    
+    #info #pin2 {position:absolute; top:-50vh; top:0; width:100%; height:100vh; padding:0 5%;}
+    
+    #info .menu {position:relative; padding-top:40vh;}
+    #info .menu li {position:relative; float:left; width:33.333%; text-align:center;}
+    
+    #info .menu img {position:absolute; bottom:0; left:50%; transform:translateX(-50%); max-width:100%;}
+    #info .menu .thumb {padding-top:63%; position:relative; _background:#f00;}
+    #info .menu .thumb .fake {position:static; visibility:hidden;}
+    #info .menu .thumb .circle {bottom: 57%;}
+    #info .menu .thumb .thumb_motion {z-index:20; bottom:19%;}
+    #info .menu li.kimmari .thumb .thumb_motion {z-index:20; bottom:30%; left:54%;}
+    #info .menu .thumb .thumb_bg {z-index:30;}
+    #info .menu .info {position:absolute; bottom:42%; left:0; right:0; z-index:40; text-align:center; opacity:0;}
+    #info .menu .info span {font-size:36px; font-weight:300;}
+	#info .menu .info span.highlight {background:#FFD966; font-weight:500;}
+    #info .scroll_after {display:none;}
+    #info h2 {position:absolute; left:0; bottom:12vh; z-index:40; width:100%; text-align:center;}
+    #info p.copy {position:absolute; left:0; bottom:5vh; width:100%; font-size:46px; font-weight:300; text-align:center;}
+
+    .section3 {height:160vh; background:url(https://1am-diet.com/_dj/img/brand/brand_bg2.png); background-size:cover;}
+    .section3 .woman_wrap {position:absolute; top:-200px; left:0; right:0; text-align:center;}
+    .section3 .woman_wrap .woman { width:100%; max-width:947px;}
+    .section3 h2 {padding-top:40vh; text-align:center;}
+    
+    
+    .section4 {position:relative; z-index:88; padding-bottom:180px;}
+    .section4 h2 {margin-top:-40vh; padding-right:5%; text-align:right;}
+    .swiper-container {padding-top:80px; width:100%; padding-bottom:50px;}
+    .swiper-slide {margin:0 30px; width:800px; text-align:center; font-size:15px; -webkit-filter: grayscale(100%); filter: gray;}
+    .swiper-slide-active {-webkit-filter: none; filter:none;}
+    .swiper-slide .info {display:none;}
+    .swiper-slide-active .info {display:block;}
+    .swiper-slide .info p {padding:40px 0 0; font-size:23px; color:#666;}
+    .swiper-slide .info strong {font-size:46px; color:#2a2a2a; font-weight:500;}
+    
+    .swiper-pagination {bottom:0 !important;}
+    .swiper-pagination-bullet {margin:0 9px !important; width:21px; height:21px; background:#2a2a2a; opacity:1;}
+    .swiper-pagination-bullet-active {background:#FFD966}
+    
+       
+    .section5 {padding-bottom:150px; background:#252a43; background-image: url(https://1am-diet.com/_dj/img/brand/brand_bg3.jpg); background-size: 100%; background-repeat: no-repeat;}
+    .section5 h2 {padding: 5% 0 0 5%; color:#fff;}
+    .section5 .copy {padding-top:70vh; color:#fff; font-size: 46px; text-align:center;}
+    
+    .section6 {position:relative; background:#252a43; height:85vh;}
+    .section6 h2 {color:#f8da63; text-align:center; padding-bottom:50px;}
+    .section6 .food {position:relative; padding-top:550px;}
+    .section6 ul {position:absolute; top:0; left:0; z-index:10; width:100%; padding:0 20px; text-align:center; font-size:0;}
+    .section6 ul li {display:inline-block; width:24%; margin: 0 0.5%;}
+    .section6 ul li img {width:100%;}
+    .section6 .bg {position:absolute; bottom:0; left:0; width:100%; height:44vh; background:#f8da63;}
+           
+    .section7 {position:relative; padding-bottom:200px; width:100%; background:#f8da63;}
+    .section7 .rolling_text_wrap {white-space:nowrap; overflow:hidden;}
+    .section7 .rolling_text {display:inline-block; padding-bottom:195px;-webkit-animation-duration: 15s;animation-duration: 15s; -webkit-animation-iteration-count: infinite;animation-iteration-count: infinite;-webkit-animation-timing-function: linear;animation-timing-function: linear;-webkit-animation-name: rolling;animation-name: rolling;}
+    .section7 .rolling_text span {margin-right: 30px; color:#fff; font-size: 154px; font-weight:bold; }
+    .section7 .bg {position:absolute; bottom:100%; left:0; right:0; z-index:30; height:100vh; background:#f8da63; opacity:0; transition:0.2s;}
+	.section7 h2 {padding-left:100px;}
+    .section7 p {padding-left:100px; font-size:46px; font-weight:300;} 
+    
+    /* animation */
+    @-webkit-keyframes rolling {
+        from {-webkit-transform: translateX(0%);transform: translateX(0%);}
+        to {-webkit-transform: translateX(-100%);transform: translateX(-100%);}
+    }
+    @keyframes rolling {
+        from {-webkit-transform: translateX(0%);transform: translateX(0%);}
+        to {-webkit-transform: translateX(-100%);transform: translateX(-100%);}
+    }
+    .section8 {padding-top:35vh; width:100%; height:100vh; background-image:url(https://1am-diet.com/_dj/img/brand/brand_bg4.jpg); background-size:cover;}
+    .section8 h3 {color:#fff; text-align:center; font-size:46px;}
+    .section8 a {display:block; margin:80px auto; width:512px; height:95px; color:#d6a83d; font-size:46px; font-weight:500; line-height:95px; text-align:center; background:#fff;}
+    
+</style>
+<section id="start">
+	<div id="intro">
+        <div class="text_wrap">
+    		<h1>새벽1시, 먹어도</h1>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 120">
+                <text x="0" y="0"><tspan dy="1em" x="0">새벽1시, 먹어도 </tspan></text>
+            </svg>
+        </div>
+        <div class="text_change_wrap">
+            <h1>괜찮아!</h1>
+        	<div class="text_change">
+                <div class="scroll_before">
+                    <svg xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="0"><tspan dy="1em" x="0">괜찮아?</tspan></text>
+                    </svg>
+                </div>
+                <div class="scroll_after">
+                	<svg xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="0"><tspan dy="1em" x="0">괜찮아</tspan><tspan font-style="italic">!</tspan></text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var controller = new ScrollMagic.Controller();
+     // container pin
+        var scene = new ScrollMagic.Scene({
+            duration: 1000 // 스크롤 몇번동안 멈춰있을건지
+        })
+        .setPin("section#start")
+        //.addIndicators({name: "1 (duration: 1000)"}) // add indicators (requires plugin)
+        .addTo(controller);
+
+        var textchange = TweenMax.to("#start .scroll_before",0.2,{"margin-top":"-150", ease:Power3.easeIn});
+        new ScrollMagic.Scene({
+        	offset: 100,
+            reverse: false
+        })
+        .setTween(textchange)
+        .addTo(controller);
+    </script>
+</section>
+<section id="info">
+    <div id="spacer2"></div>
+    <div id="trigger2"></div>
+    <div id="trigger2_change"></div>
+    <div id="pin2">
+        <div id="cont">
+            <div class="menu">
+                <ul class="clearfix">
+                    <li class="kimmari">
+                        <div class="thumb">
+                            <img src="https://1am-diet.com/_dj/img/brand/circle.png" class="circle">
+                            <img src="https://1am-diet.com/_dj/img/brand/diet_menu_01.png" class="thumb_motion">
+                            <img src="https://1am-diet.com/_dj/img/brand/round_bottom.png" class="thumb_bg">
+                        </div>
+                        <div class="info"><span class="highlight">곤약</span><span>김말이</span></div>
+                    </li>
+                    <li class="icecream">
+                        <div class="thumb">
+                            <img src="https://1am-diet.com/_dj/img/brand/circle.png" class="circle">
+                            <img src="https://1am-diet.com/_dj/img/brand/diet_menu_02.png" class="thumb_motion">
+                            <img src="https://1am-diet.com/_dj/img/brand/round_bottom.png" class="thumb_bg">
+                        </div>
+                        <div class="info"><span class="highlight">저칼로리</span><span>아이스크림</span></div>
+                    </li>
+                    <li class="bibim">
+                        <div class="thumb">
+                            <img src="https://1am-diet.com/_dj/img/brand/circle.png" class="circle">
+                            <img src="https://1am-diet.com/_dj/img/brand/diet_menu_03.png" class="thumb_motion">
+                            <img src="https://1am-diet.com/_dj/img/brand/round_bottom.png" class="thumb_bg">
+                        </div>
+                        <div class="info"><span class="highlight">곤약</span><span>비빔우동</span></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="scroll_before">
+                <h2>다음 음식들 중<br>무엇을 드실래요?</h2>
+                <p class="copy">'…먹어도 될까?' 고민이 되시나요?</p>
+            </div>
+            <div class="scroll_after">
+                <h2>이라면 어때요?</h2>
+                <p class="copy">더이상 고민하지 마세요.</p>
+            </div>
+        </div>
+    </div>
+	<script>
+        var scene = new ScrollMagic.Scene({
+ 			triggerElement: "#trigger2",
+            duration: 1200
+        })
+        .setPin("#pin2")
+        //.addIndicators({name: "2 (duration: 1200)"}) // add indicators (requires plugin)
+        .addTo(controller);
+        
+        var scrollchange = new TimelineMax()
+        .add(TweenMax.to("#info .menu .thumb .thumb_motion",0.2,{"margin-bottom":"100px", ease:Power3.easeIn}))
+        .add(TweenMax.to("#info .menu .info",0,{"opacity":"1"}))
+        .add(TweenMax.to("#info .scroll_before",0,{"display":"none"}))
+        .add(TweenMax.to("#info .scroll_after",0,{"display":"block"}));
+        
+        new ScrollMagic.Scene({
+        	triggerElement: "#trigger2_change",
+        })
+        .setTween(scrollchange)
+        //.addIndicators({name: "2change"}) // add indicators (requires plugin)
+        .addTo(controller);
+        
+    </script>
+</section>
+<!-- 3. 조금 더 자유로워져도 괜찮아요 -->
+<section class="section3">
+	<div class="woman_wrap"><img class="woman" src="https://1am-diet.com/_dj/img/brand/woman.png"></div>
+    <h2>1am 안에서는<br>조금 더<br>자유로워져도 괜찮아요.</h2>
+</section>
+<!-- 4. 이런 사람들이 모여 만들었거든요! -->
+<div class="section4">
+    <h2>이런 사람들이 모여<br>만들었거든요!</h2>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+            	<div>
+                    <div class="img"><img src="https://1am-diet.com/_dj/img/brand/dummy1.jpg"></div>
+                    <div class="info">
+                    	<p>sns 광고상품에 통장 바쳐본</p>
+                        <strong>쇼핑중독 마케터</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="img"><img src="https://1am-diet.com/_dj/img/brand/dummy2.jpg"></div>
+                    <div class="info">
+                    	<p>sns 광고상품에 통장 바쳐본</p>
+                        <strong>쇼핑중독 마케터</strong>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="img"><img src="https://1am-diet.com/_dj/img/brand/dummy3.jpg"></div>
+                <div class="info">
+                    <p>sns 광고상품에 통장 바쳐본</p>
+                    <strong>쇼핑중독 마케터</strong>
+                </div>
+            </div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- Add Pagination -->
+    	<div class="swiper-pagination"></div>
+    </div>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 'auto',
+            centeredSlides:true,
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+              },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+</div>
+<!-- 5. 우리는 고민했습니다 -->
+<div class="section section5">
+    <h2>새벽 한 시,<br>지금 먹어도<br>괜찮아!</h2>
+    <div class="copy">우리는 고민했습니다.<br><br>어떻게 하면 스트레스 없이<br>건강한 식습관을 들일 수 있을까?<br><br>야근에 지친 밤,<br>허기에 괴로운 밤,<br>간식이 간절한 밤.<br><br>새벽 한 시의 유혹을<br>우리는 과연 평생 참을 수 있을까요?</div>
+</div>
+<!-- 6. 이 좋은걸 왜 포기하나요? -->
+<div class="section section6">
+	<h2>이 좋은걸 왜 포기하나요?</h2>
+    <div class="food">
+    	<ul>
+        	<li><img src="https://1am-diet.com/_dj/img/brand/food1.jpg"></li>
+            <li><img src="https://1am-diet.com/_dj/img/brand/food2.jpg"></li>
+            <li><img src="https://1am-diet.com/_dj/img/brand/food3.jpg"></li>
+            <li><img src="https://1am-diet.com/_dj/img/brand/food4.jpg"></li>
+        </ul>
+    </div>
+    <div class="bg"></div>
+</div>
+<!-- 7. 다이어트 & 라이프 밸런스 -->
+<div class="section section7">
+    <div class="bg"></div>
+    <div class="rolling_text_wrap">
+        <div class="rolling_text"><span>DIET&amp;LIFE BALANCE</span><span>DIET&amp;LIFE BALANCE</span></div>
+        <div class="rolling_text"><span>DIET&amp;LIFE BALANCE</span><span>DIET&amp;LIFE BALANCE</span></div>
+    </div>
+    <div>
+    	<h2>원한다면 먹을 수 있게,<br> 원한만큼 맛있게,<br>원한 것보다 가볍게!</h2>
+        <p>1am은 다이어트와 라이프의 밸런스,<br>다라밸을 위해 탄생했어요.</p>
+    </div>
+    <script>
+        $(window).on('scroll',function(){
+            var scroll_w = $(window).scrollTop();
+            var scroll_sec7 = $('.section7').offset().top - 700;
+            var scroll_between = scroll_w - scroll_sec7; //차이값 (rolling 텍스트 영역 도착한 후에 스크롤된 높이)
+
+            $('.section7 .bg').css('opacity', 0 + scroll_between/200 );
+
+        });
+    </script>
+</div>
+<!-- 8. Shop -->
+<div class="section section8">
+	<h3>1am이 제안하는<br>몸도, 마음도 가벼운 일상<br>지금 함께 시작할까요?</h3>
+    <a href="/product/list.html?cate_no=24">구매하기</a>
+</div>
+                 
+                        
+                               
+                                      
+                                             
+                                                    
+                                                           
+                                                                  
+                                                                                
+                  
+                   
+    </div>
+<link rel="stylesheet" href="https://1am-diet.com/_dj/css/dj-footer.css">	
+	<div id="footer">
+		<div class="inner">
+			<div class="xans-element- xans-layout xans-layout-footer ">
+				<div class="footer_logo">
+				<a href="/"><img src="https://1am-diet.com/_dj/img/logo_footer.png"></a>
+				</div>
+				<div class="footer_content">
+					<p class="customer_call">
+						<span class="phone">070-4497-3880</span> <span>평일</span> <span class="time">AM 9:00 - PM 6:00</span> / <span>점심</span> <span class="time">PM 12:00 - PM 1:00</span> / <span>주말 및 공휴일 휴무</span>
+					</p>
+					<p class="address">
+						<span>(주)푸드나무플랫폼센터</span><span>대표이사 : 김영문</span><span>개인정보관리책임자 : 김영문</span><span class="biz_no_link">사업자 등록번호:441-85-01089 <a href="#none" onclick="window.open('http://www.ftc.go.kr/bizCommPop.do?wrkr_no=4418501089', 'bizCommPop', 'width=750, height=950;');return false;">[사업자정보확인]</a></span>
+					</p>
+					<p class="address">
+						<span>통신판매번호:제2019-서울마포-1121호</span><span>서울특별시 마포구 매봉산로2안길 12 (상암동) </span><span>팩스 : 02-6351-8088</span><span><a href="mailto:on.seed@foodnamoo.com">1am-diet@foodnamoo.com</a></span>
+					</p>
+					<ul class="utilMenu">
+						<li><a href="/board/urgency/urgency.html">제휴/문의</a></li>
+						<li><a href="/board/%EA%B3%B5%EC%A7%80%EC%82%AC%ED%95%AD/1/">공지사항</a></li>
+						<li><a href="/member/agreement.html">이용약관</a></li>
+						<li><a href="/member/privacy.html"><strong>개인정보처리방침</strong></a></li>
+						<li><p class="copyright">Copyright©2020 원에이엠 All rights reserved.</p></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+</body>
+</html>
